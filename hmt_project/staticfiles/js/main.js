@@ -95,7 +95,7 @@
 		$('.portfolio-slider').owlCarousel({
 			autoplay:true,
 			autoplayTimeout:4000,
-			margin:15,
+			margin:150,
 			smartSpeed:300,
 			autoplayHoverPause:true,
 			loop:true,
