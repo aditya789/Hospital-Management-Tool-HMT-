@@ -563,6 +563,7 @@ body{
 /* Header Sticky */
 .header.sticky .header-inner{
 	position:fixed;
+	align-items: flex-end;
 	z-index:999;
 	top:0;
 	left:0;
