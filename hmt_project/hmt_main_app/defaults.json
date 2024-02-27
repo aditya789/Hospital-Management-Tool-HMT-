@@ -1,0 +1,16 @@
+{
+    "HospitalName": "My Hospital",
+    "ContactNumber": "123456789",
+    "Header": "We Provide Medical Services That You Can Trust!",
+    "HeaderTagline": "Add any tag line which is suiltable for background image and headline",
+    "Scheduler_1": "Emergency Cases",
+    "Scheduler_1_Tagline": "Emergency cases demand swifrequire rapid triage, assessment, and treatment by a skilled team. Swift diagnosis, tailored interventions, and continuous monitoring ensure effective management. Clear communication with patients and documentation of care are crucial for optimal outcomes.",
+    "Scheduler_2": "Doctors Availability",
+    "Scheduler_2_Tagline": "Hospitals schedule rotating shifts to ensure doctors are available round-the-clock. On-call systems facilitate access to specialists for consultations or emergencies outside regular hours. Strategic planning ensures balanced staffing for timely and comprehensive medical care.",
+    "Scheduler_3": "Working Hours!",
+    "Scheduler_3_Tagline": "<li class='day'>Monday<span>9AM - 6PM</span></li><li class='day'>Tuesday<span>9AM - 6PM</span></li><li class='day'>Wednesday<span>9AM - 6PM</span></li><li class='day'>Thursday<span>9AM - 6PM</span></li><li class='day'>Firday<span>9AM - 6PM</span></li><li class='day'>Saturday<span>9AM - 6PM</span></li><li class='day'>Sunday <span>9AM - 12PM</span></li>",
+    "EmergencyCallHeader": "Do you need Emergency Medical Care? Call @",
+    "EmergencyCallTagline": "We ensure immediate response to critical situations, providing life-saving interventions and rapid transport to healthcare facilities. Highly trained professionals deliver urgent medical assistance, prioritizing patient stabilization and timely treatment.",
+    "CleanlinessHeader": "We Maintain Cleanliness Rules Inside Our Hospital",
+    "CleanlinessTagline": "Our Hospital cleanliness is upheld through rigorous disinfection protocols and strict hand hygiene measures. Continuous monitoring ensures a safe and hygienic environment for patients and staff."
+}

@@ -71,7 +71,7 @@
 							<div class="col-lg-3 col-md-3 col-12">
 								<!-- Start Logo -->
 								<div class="logo">
-									<a href="{% url 'home' %}">Hospital Name with logo </a>
+									<a href="{% url 'home' %}">{{obj.hospital_name}} </a>
 									<!-- <a href="{% url 'home' %}"><img src="{% static "/img/hospital_logo.png" %}"  alt="#"></a> -->
 								</div>
 								<!-- End Logo -->
@@ -87,7 +87,7 @@
 											<li><a href="#">Doctors </a></li>
 											<li><a href="#">Services </a></li>
 											<li><a href="#">Highlights & Achievements </a></li>
-											<li><a href="contact.html">Contact Us</a></li>
+											<li><a href="{% url 'contact' %}">Contact Us</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -115,8 +115,8 @@
 						<div class="row">
 							<div class="col-lg-7">
 								<div class="text">
-									<h1>We Provide <span>Medical</span> Services That You Can <span>Trust!</span></h1>
-									<p>One of the Main Agenda of the hospital</p>
+									<h1>{{obj.headliner_1}}</h1>
+									<p>{{obj.headline_1_tagline}}</p>
 									<div class="button">
 										<a href="#" class="btn">Get Appointment</a>
 										<a href="#" class="btn primary">Learn More</a>
@@ -133,8 +133,8 @@
 						<div class="row">
 							<div class="col-lg-7">
 								<div class="text">
-									<h1>We Provide <span>Medical</span> Services That You Can <span>Trust!</span></h1>
-									<p>Another Main Agenda of the hospital</p>
+									<h1>{{obj.headliner_2}}</h1>
+									<p>{{obj.headline_2_tagline}}</p>
 									<div class="button">
 										<a href="#" class="btn">Get Appointment</a>
 										<a href="#" class="btn primary">About Us</a>
@@ -151,8 +151,8 @@
 						<div class="row">
 							<div class="col-lg-7">
 								<div class="text">
-									<h1>We Provide <span>Medical</span> Services That You Can <span>Trust!</span></h1>
-									<p>Another Main Agenda of the hospital </p>
+									<h1>{{obj.headliner_3}}</h1>
+									<p>{{obj.headline_3_tagline}}</p>
 									<div class="button">
 										<a href="#" class="btn">Get Appointment</a>
 										<a href="#" class="btn primary">Contact Now</a>
@@ -180,8 +180,8 @@
 										<i class="fa fa-ambulance"></i>
 									</div>
 									<div class="single-content">
-										<h4>Emergency Cases</h4>
-										<p>Emergency cases demand swifrequire rapid triage, assessment, and treatment by a skilled team. Swift diagnosis, tailored interventions, and continuous monitoring ensure effective management. Clear communication with patients and documentation of care are crucial for optimal outcomes.</p>
+										<h4>{{obj.scheduler_1}}</h4>
+										<p>{{obj.scheduler_1_tagline}}</p>
 										<!-- <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a> -->
 									</div>
 								</div>
@@ -195,9 +195,8 @@
 										<i class="icofont-prescription"></i>
 									</div>
 									<div class="single-content">
-										<h4>Doctors Availability</h4>
-										<p>Hospitals schedule rotating shifts to ensure doctors are available round-the-clock. On-call systems facilitate access to specialists for consultations or emergencies outside regular hours. Strategic planning ensures balanced staffing for timely and comprehensive medical care.</p>
-									</div>
+										<h4>{{obj.scheduler_2}}</h4>
+										<p>{{obj.scheduler_2_tagline}}</p></div>
 								</div>
 							</div>
 						</div>
@@ -209,17 +208,10 @@
 										<i class="icofont-ui-clock"></i>
 									</div>
 									<div class="single-content">
-										<h4>Opening Hours</h4>
+										<h4>{{obj.scheduler_3}}</h4>
 										<ul class="time-sidual">
-											<li class="day">Monday<span>9AM - 6PM</span></li>
-											<li class="day">Tuesday<span>9AM - 6PM</span></li>
-											<li class="day">Wednesday<span>9AM - 6PM</span></li>
-											<li class="day">Thursday<span>9AM - 6PM</span></li>
-											<li class="day">Firday<span>9AM - 6PM</span></li>
-											<li class="day">Saturday<span>9AM - 6PM</span></li>
-											<li class="day">Sunday <span>9AM - 12PM</span></li>
+											{{obj.scheduler_3_tagline | safe}}
 										</ul>
-										<!-- <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a> -->
 									</div>
 								</div>
 							</div>
@@ -236,8 +228,8 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-12">
 						<div class="content">
-							<h2>Do you need Emergency Medical Care? Call @ 123456789</h2>
-							<p>We ensure immediate response to critical situations, providing life-saving interventions and rapid transport to healthcare facilities. Highly trained professionals deliver urgent medical assistance, prioritizing patient stabilization and timely treatment.</p>
+							<h2>{{obj.emergency_call_header}} {{obj.contact_number}} </h2>
+							<p>{{emergency_call_tagline}}</p>
 							<div class="button">
 								<a href="#" class="btn">Contact Now</a>
 								<a href="#" class="btn second">Learn More<i class="fa fa-long-arrow-right"></i></a>
@@ -248,17 +240,15 @@
 			</div>
 		</section>
 		<!--/ End Call to action -->
-
-		
 		<!-- Start portfolio -->
 		<section class="portfolio section">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>We Maintain Cleanliness Rules Inside Our Hospital</h2>
+							<h2>{{ obj.cleanliness_header }}</h2>
 							<img src="{% static "/img/section-img.png" %}" alt="#">
-							<p>Our Hospital cleanliness is upheld through rigorous disinfection protocols and strict hand hygiene measures. Continuous monitoring ensures a safe and hygienic environment for patients and staff.</p>
+							<p>{{ obj.cleanliness_tagline }}</p>
 						</div>
 					</div>
 				</div>

@@ -3,4 +3,4 @@ from . models import *
 
 # Register your models here.
 
-admin.site.register(HospitalDetail)
+admin.site.register(HomePage)
