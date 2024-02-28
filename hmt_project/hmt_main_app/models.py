@@ -11,6 +11,9 @@ class HomePage(models.Model):
         max_length=200, blank=False, default=defaults.get('HospitalName'))
     contact_number = models.IntegerField(
         blank=True, default=defaults.get('ContactNumber'))
+    contact_email = models.EmailField(blank=False,default = defaults.get('ContactEmail'))
+    contact_address = models.TextField(blank=False,default = defaults.get('ContactAddress'))
+    
     headliner_1 = models.CharField(
         max_length=200, blank=False, default=defaults.get('Header'))
     headline_1_tagline = models.CharField(
@@ -57,3 +60,8 @@ class HomePage(models.Model):
 @receiver(pre_save, sender=HomePage)
 def pre_save_homepage(sender, instance, **kwargs):
     HomePage.objects.all().delete()
+
+
+# class Contact(models.Model):
+    
+    

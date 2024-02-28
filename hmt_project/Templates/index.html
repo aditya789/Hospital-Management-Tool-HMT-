@@ -1,110 +1,6 @@
+{% extends 'base.html'%}
 {% load static %}
-<!doctype html>
-<html class="no-js" lang="zxx">
-    <head>
-        <!-- Meta Tags -->
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="keywords" content="Site keywords here">
-		<meta name="description" content="">
-		<meta name='copyright' content=''>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
-		<!-- Title -->
-        <title>HMT</title>
-		
-		<!-- Favicon -->
-        <link rel="icon" href="{% static "/img/favicon.png" %}">
-		
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="{% static "/css/bootstrap.min.css" %}" >
-		<!-- Nice Select CSS -->
-		<link rel="stylesheet" href="{% static "/css/nice-select.css" %}" >
-		<!-- Font Awesome CSS -->
-        <link rel="stylesheet" href="{% static "/css/font-awesome.min.css" %}">
-		<!-- icofont CSS -->
-        <link rel="stylesheet" href="{% static "/css/icofont.css" %}" >
-		<!-- Slicknav -->
-		<link rel="stylesheet" href="{% static "/css/slicknav.min.css" %} ">
-		<!-- Owl Carousel CSS -->
-        <link rel="stylesheet" href="{% static "/css/owl-carousel.css" %}" >
-		<!-- Datepicker CSS -->
-		<link rel="stylesheet" href="{% static "/css/datepicker.css" %}" >
-		<!-- Animate CSS -->
-        <link rel="stylesheet" href="{% static "/css/animate.min.css" %}" >
-		<!-- Magnific Popup CSS -->
-        <link rel="stylesheet" href="{% static "/css/magnific-popup.css" %} ">
-		
-		<!-- Medipro CSS -->
-        <link rel="stylesheet" href="{% static "/css/normalize.css" %}" >
-        <link rel="stylesheet" href="{% static "/style.css" %}" >
-        <link rel="stylesheet" href="{% static "/css/responsive.css" %}">
-		
-    </head>
-    <body>
-	
-		<!-- Preloader -->
-        <div class="preloader">
-            <div class="loader">
-                <div class="loader-outter"></div>
-                <div class="loader-inner"></div>
-
-                <div class="indicator"> 
-                    <svg width="16px" height="12px">
-                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-                    </svg>
-                </div>
-            </div>
-        </div>
-        <!-- End Preloader -->
-	
-		<!-- Header Area -->
-		<header class="header" >
-			<div class="header-inner">
-				<div class="container">
-					<div class="inner">
-						<div class="row">
-							<div class="col-lg-3 col-md-3 col-12">
-								<!-- Start Logo -->
-								<div class="logo">
-									<a href="{% url 'home' %}">{{obj.hospital_name}} </a>
-									<!-- <a href="{% url 'home' %}"><img src="{% static "/img/hospital_logo.png" %}"  alt="#"></a> -->
-								</div>
-								<!-- End Logo -->
-								<!-- Mobile Nav -->
-								<div class="mobile-nav"></div>
-								<!-- End Mobile Nav -->
-							</div>
-							<div class="col-lg-7 col-md-9 col-12">
-								<!-- Main Menu -->
-								<div class="main-menu">
-									<nav class="navigation">
-										<ul class="nav menu">
-											<li><a href="#">Doctors </a></li>
-											<li><a href="#">Services </a></li>
-											<li><a href="#">Highlights & Achievements </a></li>
-											<li><a href="{% url 'contact' %}">Contact Us</a></li>
-										</ul>
-									</nav>
-								</div>
-								<!--/ End Main Menu -->
-							</div>
-							<div class="col-lg-2 col-12">
-								<div class="get-quote">
-									<a href="appointment.html" class="btn">Book Appointment</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/ End Header Inner -->
-		</header>
-		<!-- End Header Area -->
+{% block content %}
 		
 		<!-- Slider Area -->
 		<section class="slider">
@@ -115,11 +11,11 @@
 						<div class="row">
 							<div class="col-lg-7">
 								<div class="text">
-									<h1>{{obj.headliner_1}}</h1>
-									<p>{{obj.headline_1_tagline}}</p>
+									<h1>{{homedata.headliner_1}}</h1>
+									<p>{{homedata.headline_1_tagline}}</p>
 									<div class="button">
 										<a href="#" class="btn">Get Appointment</a>
-										<a href="#" class="btn primary">Learn More</a>
+										<a href="{% url 'services' %}" class="btn primary">Learn More</a>
 									</div>
 								</div>
 							</div>
@@ -133,11 +29,11 @@
 						<div class="row">
 							<div class="col-lg-7">
 								<div class="text">
-									<h1>{{obj.headliner_2}}</h1>
-									<p>{{obj.headline_2_tagline}}</p>
+									<h1>{{homedata.headliner_2}}</h1>
+									<p>{{homedata.headline_2_tagline}}</p>
 									<div class="button">
 										<a href="#" class="btn">Get Appointment</a>
-										<a href="#" class="btn primary">About Us</a>
+										<a href="{% url 'highlights' %}" class="btn primary">About Us</a>
 									</div>
 								</div>
 							</div>
@@ -151,11 +47,11 @@
 						<div class="row">
 							<div class="col-lg-7">
 								<div class="text">
-									<h1>{{obj.headliner_3}}</h1>
-									<p>{{obj.headline_3_tagline}}</p>
+									<h1>{{homedata.headliner_3}}</h1>
+									<p>{{homedata.headline_3_tagline}}</p>
 									<div class="button">
 										<a href="#" class="btn">Get Appointment</a>
-										<a href="#" class="btn primary">Contact Now</a>
+										<a href="{% url 'contact' %}" class="btn primary">Contact Now</a>
 									</div>
 								</div>
 							</div>
@@ -180,8 +76,8 @@
 										<i class="fa fa-ambulance"></i>
 									</div>
 									<div class="single-content">
-										<h4>{{obj.scheduler_1}}</h4>
-										<p>{{obj.scheduler_1_tagline}}</p>
+										<h4>{{homedata.scheduler_1}}</h4>
+										<p>{{homedata.scheduler_1_tagline}}</p>
 										<!-- <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a> -->
 									</div>
 								</div>
@@ -195,8 +91,8 @@
 										<i class="icofont-prescription"></i>
 									</div>
 									<div class="single-content">
-										<h4>{{obj.scheduler_2}}</h4>
-										<p>{{obj.scheduler_2_tagline}}</p></div>
+										<h4>{{homedata.scheduler_2}}</h4>
+										<p>{{homedata.scheduler_2_tagline}}</p></div>
 								</div>
 							</div>
 						</div>
@@ -208,9 +104,9 @@
 										<i class="icofont-ui-clock"></i>
 									</div>
 									<div class="single-content">
-										<h4>{{obj.scheduler_3}}</h4>
+										<h4>{{homedata.scheduler_3}}</h4>
 										<ul class="time-sidual">
-											{{obj.scheduler_3_tagline | safe}}
+											{{homedata.scheduler_3_tagline | safe}}
 										</ul>
 									</div>
 								</div>
@@ -228,7 +124,7 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-12">
 						<div class="content">
-							<h2>{{obj.emergency_call_header}} {{obj.contact_number}} </h2>
+							<h2>{{homedata.emergency_call_header}} {{homedata.contact_number}} </h2>
 							<p>{{emergency_call_tagline}}</p>
 							<div class="button">
 								<a href="#" class="btn">Contact Now</a>
@@ -246,9 +142,9 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>{{ obj.cleanliness_header }}</h2>
+							<h2>{{ homedata.cleanliness_header }}</h2>
 							<img src="{% static "/img/section-img.png" %}" alt="#">
-							<p>{{ obj.cleanliness_tagline }}</p>
+							<p>{{ homedata.cleanliness_tagline }}</p>
 						</div>
 					</div>
 				</div>
@@ -288,63 +184,4 @@
 		</section>
 		<!--/ End portfolio -->
 		
-		<!-- Footer Area -->
-		<footer id="footer" class="footer ">
-			<!-- Copyright -->
-			<div class="copyright">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-12">
-							<div class="copyright-content">
-								<p>© Copyright 2024  |  All Rights Reserved by <a href="https://shanmuk.pythonanywhere.com/" target="_blank">Aditya Shanmuk</a> </p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/ End Copyright -->
-		</footer>
-		<!--/ End Footer Area -->
-		
-		<!-- jquery Min JS -->
-        <script src="{% static "/js/jquery.min.js" %}"></script>
-		<!-- jquery Migrate JS -->
-		<script src="{% static "/js/jquery-migrate-3.0.0.js" %}"></script>
-		<!-- jquery Ui JS -->
-		<script src="{% static "/js/jquery-ui.min.js" %}"></script>
-		<!-- Easing JS -->
-        <script src="{% static "/js/easing.js" %}"></script>
-		<!-- Color JS -->
-		<script src="{% static "/js/colors.js" %}"></script>
-		<!-- Popper JS -->
-		<script src="{% static "/js/popper.min.js" %}"></script>
-		<!-- Bootstrap Datepicker JS -->
-		<script src="{% static "/js/bootstrap-datepicker.js" %}"></script>
-		<!-- Jquery Nav JS -->
-        <script src="{% static "/js/jquery.nav.js" %}"></script>
-		<!-- Slicknav JS -->
-		<script src="{% static "/js/slicknav.min.js" %}"></script>
-		<!-- ScrollUp JS -->
-        <script src="{% static "/js/jquery.scrollUp.min.js" %}"></script>
-		<!-- Niceselect JS -->
-		<script src="{% static "/js/niceselect.js" %}"></script>
-		<!-- Tilt Jquery JS -->
-		<script src="{% static "/js/tilt.jquery.min.js" %}"></script>
-		<!-- Owl Carousel JS -->
-        <script src="{% static "/js/owl-carousel.js" %}"></script>
-		<!-- counterup JS -->
-		<script src="{% static "/js/jquery.counterup.min.js" %}"></script>
-		<!-- Steller JS -->
-		<script src="{% static "/js/steller.js" %}"></script>
-		<!-- Wow JS -->
-		<script src="{% static "/js/wow.min.js" %}"></script>
-		<!-- Magnific Popup JS -->
-		<script src="{% static "/js/jquery.magnific-popup.min.js" %}"></script>
-		<!-- Counter Up CDN JS -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-		<!-- Bootstrap JS -->
-		<script src="{% static "/js/bootstrap.min.js" %}"></script>
-		<!-- Main JS -->
-		<script src="{% static "/js/main.js" %}"></script>
-    </body>
-</html>
+{%endblock%}

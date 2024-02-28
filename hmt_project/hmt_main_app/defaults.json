@@ -1,6 +1,8 @@
 {
     "HospitalName": "My Hospital",
     "ContactNumber": "123456789",
+    "ContactEmail": "HospitalEmail@email.com",
+    "ContactAddress" : "1-2-3,Avenue Road,Straight Way Street,Patny City,786588",
     "Header": "We Provide Medical Services That You Can Trust!",
     "HeaderTagline": "Add any tag line which is suiltable for background image and headline",
     "Scheduler_1": "Emergency Cases",
