@@ -44,8 +44,12 @@ def doctors_page(request):
 
 def services_page(request):
     homedata = HomePage.objects.all().values()[0]
-    return render(request,'contact.html',{'homedata': homedata})
+    return render(request,'services.html',{'homedata': homedata})
 
 def highlights_page(request):
     homedata = HomePage.objects.all().values()[0]
-    return render(request,'contact.html',{'homedata': homedata})
+    return render(request,'highlights.html',{'homedata': homedata})
+
+def appointments_page(request):
+    homedata = HomePage.objects.all().values()[0]
+    return render(request,'appointment.html',{'homedata': homedata})

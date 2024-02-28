@@ -1390,7 +1390,6 @@ body{
 	border-radius: 3px;
 	margin: 0 0 0 -52px;
 	margin-top: 49px;
-	box-sizing: ;
 }
 .testimonials .owl-dots .owl-dot {
 	display: inline-block;
@@ -2641,7 +2640,7 @@ body{
 ============================*/
 .appointment{
 	background:#fff;
-	padding-top:100px;
+	padding-top:40px;
 }
 .appointment.single-page {
 	background: #fff;
