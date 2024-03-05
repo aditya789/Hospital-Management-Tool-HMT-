@@ -75,12 +75,31 @@ WSGI_APPLICATION = 'hmt_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'myawsdb',
+        'USER': 'myawsoracledb',
+        'PASSWORD': 'myawsoracledb',
+        'HOST': 'myawsoracledb.cz24oc4oogkm.ap-south-1.rds.amazonaws.com',
+        'PORT': '1521',
     }
 }
+
+''' Steps to install aws oracle db for django app
+    --> Create RDS Oracle db in AWS
+    --> Navigate to security group id and add a rule as all traffic.
+    --> configure db details as above
+    --> install oracledb using pip   (pip install oracledb)
+    --> do the command to make sure the connection is established or not (python manage.py migrate)
+'''
 
 
 # Password validation
@@ -125,3 +144,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# AWS S3 Bucket
+
+AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY =''
+AWS_STORAGE_BUCKET_NAME ='myawsadityabucket'
+AWS_S3_SIGNATURE_NAME ='s3v4'
+AWS_S3_REGION_NAME ='ap-south-1'
+AWS_S3_FILE_OVERWRITE =''
+AWS_DEFAULT__ACL =''
+AWS_S3_VERIFY =''
+DEFAULT_FILE_STORAGE =''
