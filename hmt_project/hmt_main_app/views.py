@@ -4,10 +4,6 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.contrib import messages
 
-
-# def send_welcome_email(request):
-
-#     return 
     
 def home_page(request):
     try:
@@ -27,12 +23,12 @@ def contact_page(request):
                 subject = request.POST['name'] + " :: " + request.POST['subject'] + " :: " + request.POST['phone']
                 message =  request.POST['message']
                 from_email = request.POST['email']
-                recipient_list = ['aditya.pydev@gmail.com']
+                recipient_list = ['Email List']
                 messages.success(request,f'Email has been successfully sent!')
                 homedata.update({
                     'messages':messages
                 })
-                send_mail(subject, message, from_email, recipient_list)
+                # send_mail(subject, message, from_email, recipient_list)
             except Exception as e:
                 errorRaised = '<h2>'+' Error in sending email and here is the error '+ str(e) +'</h2>'
                 return HttpResponse(errorRaised)
