@@ -13,9 +13,11 @@ def home_page(request):
     try:
         homedata = HomePage.objects.all().values()[0]
         return render(request, 'index.html', {'homedata': homedata})
-    except:
+    except Exception as e:
         if len(HomePage.objects.all())==0:
             return HttpResponse("<h2>Don't have data in the database, please do migrations or check in the admin page</h2>")
+        else:
+            return HttpResponse('<h2> Error in Home page and here is the error '+ str(e) + '</h2>')
 
 def contact_page(request):
     try:
